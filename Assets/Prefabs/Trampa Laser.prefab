@@ -973,6 +973,7 @@ MonoBehaviour:
   tiempo_fuera: 1.5
   tiempo_dentro: 1.5
   velocidad: 3
+  "da\xF1oInstantaneo": 50
 --- !u!54 &3662770288088750703
 Rigidbody:
   m_ObjectHideFlags: 0

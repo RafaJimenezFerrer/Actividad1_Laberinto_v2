@@ -9784,6 +9784,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::trampa_fuego
   tiempo_encendido: 2
   tiempo_apagado: 2
+  "da\xF1oPorSegundo": 20
+  "sonidoDa\xF1o": {fileID: 8300000, guid: 92cdb0760fedcde46923a6ea573a5d3e, type: 3}
+  tiempoEntreSonidos: 1
 --- !u!1 &562502147304415010
 GameObject:
   m_ObjectHideFlags: 0
