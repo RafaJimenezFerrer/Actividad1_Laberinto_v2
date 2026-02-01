@@ -522,6 +522,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 19588385245968726, guid: 8ee08d04ad5df46fbb2e97260b63420b, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2032058545}
+    - targetCorrespondingSourceObject: {fileID: 19588385245968726, guid: 8ee08d04ad5df46fbb2e97260b63420b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2032058552}
   m_SourcePrefab: {fileID: 100100000, guid: 8ee08d04ad5df46fbb2e97260b63420b, type: 3}
 --- !u!1001 &86819940
 PrefabInstance:
@@ -2165,7 +2168,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51b1dbaecf8c7a746a851f192ea6fd73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  velocidadAvance: 5
+  velocidadAvance: 4
   velocidadGiro: 90
 --- !u!143 &322947958
 CharacterController:
@@ -2494,6 +2497,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 19588385245968726, guid: 8ee08d04ad5df46fbb2e97260b63420b, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1013098472}
+    - targetCorrespondingSourceObject: {fileID: 19588385245968726, guid: 8ee08d04ad5df46fbb2e97260b63420b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1013098479}
   m_SourcePrefab: {fileID: 100100000, guid: 8ee08d04ad5df46fbb2e97260b63420b, type: 3}
 --- !u!1 &330585543
 GameObject:
@@ -3086,6 +3092,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 19588385245968726, guid: 8ee08d04ad5df46fbb2e97260b63420b, type: 3}
       insertIndex: -1
       addedObject: {fileID: 398143064}
+    - targetCorrespondingSourceObject: {fileID: 19588385245968726, guid: 8ee08d04ad5df46fbb2e97260b63420b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 398143071}
   m_SourcePrefab: {fileID: 100100000, guid: 8ee08d04ad5df46fbb2e97260b63420b, type: 3}
 --- !u!1 &398143063 stripped
 GameObject:
@@ -3179,6 +3188,20 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &398143071
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 398143063}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 104c12a3144a43a469f376946242603b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: "Assembly-CSharp::EnemigoFantasmaDa\xF1o"
+  "da\xF1o": 20
+  "tiempoEntreDa\xF1o": 1.2
 --- !u!1 &404728273
 GameObject:
   m_ObjectHideFlags: 0
@@ -6472,6 +6495,20 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1013098479
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1013098471}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 104c12a3144a43a469f376946242603b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: "Assembly-CSharp::EnemigoFantasmaDa\xF1o"
+  "da\xF1o": 20
+  "tiempoEntreDa\xF1o": 1.2
 --- !u!1001 &1018931440
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8666,6 +8703,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 19588385245968726, guid: 8ee08d04ad5df46fbb2e97260b63420b, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1423005850}
+    - targetCorrespondingSourceObject: {fileID: 19588385245968726, guid: 8ee08d04ad5df46fbb2e97260b63420b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1423005857}
   m_SourcePrefab: {fileID: 100100000, guid: 8ee08d04ad5df46fbb2e97260b63420b, type: 3}
 --- !u!1 &1423005849 stripped
 GameObject:
@@ -8758,6 +8798,20 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1423005857
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1423005849}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 104c12a3144a43a469f376946242603b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: "Assembly-CSharp::EnemigoFantasmaDa\xF1o"
+  "da\xF1o": 20
+  "tiempoEntreDa\xF1o": 1.2
 --- !u!1001 &1443452262
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12867,6 +12921,20 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2032058552
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2032058544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 104c12a3144a43a469f376946242603b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: "Assembly-CSharp::EnemigoFantasmaDa\xF1o"
+  "da\xF1o": 20
+  "tiempoEntreDa\xF1o": 1.2
 --- !u!1001 &2040018109
 PrefabInstance:
   m_ObjectHideFlags: 0
