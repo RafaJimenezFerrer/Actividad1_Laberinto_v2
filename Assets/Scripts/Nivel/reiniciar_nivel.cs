@@ -1,11 +1,11 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class reiniciar_nivel : MonoBehaviour
+public class ReiniciarNivel : MonoBehaviour
 {
-    public void reiniciar()
+    public void Reiniciar()
     {
         Time.timeScale = 1f;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
