@@ -1,13 +1,18 @@
 using UnityEngine;
 
+[RequireComponent (typeof(CharacterController))]
 public class MovimientoPersonaje : MonoBehaviour
 {
+    // Variables
+    [Header("Variables publicas")]
     public float velocidadAvance = 5f;
     public float velocidadGiro = 90f;
 
+    // Variables privadas
     private CharacterController controller;
 
-    void Start()
+    // Metodos
+    void Awake()
     {
         controller = GetComponent<CharacterController>();
     }

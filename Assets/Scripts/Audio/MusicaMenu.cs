@@ -2,9 +2,12 @@ using UnityEngine;
 
 public class MusicaMenu : MonoBehaviour
 {
+    // Variables
+    // Variables privadas
     private static MusicaMenu instancia;
 
-    void Awake()
+    // Métodos
+    private void Awake()
     {
         if (instancia != null)
         {

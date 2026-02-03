@@ -1,7 +1,9 @@
 using UnityEngine;
 
-public class final_nivel : MonoBehaviour
+public class FinalNivel : MonoBehaviour
 {
+    // Variables
+    [Header("Variables publicas")]
     [Header("UI")]
     public GameObject canvas_nivel_superado;
     public GameObject barraVida;
@@ -10,8 +12,10 @@ public class final_nivel : MonoBehaviour
     public AudioSource audioSource;
     public AudioClip sonidoWin;
 
+    // Variables privadas
     private bool nivelCompletado = false;
 
+    // Metodos
     private void Start()
     {
         if (canvas_nivel_superado != null)

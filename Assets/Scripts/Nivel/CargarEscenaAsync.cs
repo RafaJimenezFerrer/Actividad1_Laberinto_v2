@@ -4,10 +4,13 @@ using System.Collections;
 
 public class CargarEscenaAsync : MonoBehaviour
 {
+    // Variables
+    [Header("Variables publicas")]
     [Header("Carga")]
     public GameObject pantallaCarga;
     public string nombreEscena = "SampleScene";
 
+    // Metodos
     public void CargarNivel()
     {
         StartCoroutine(Cargar());

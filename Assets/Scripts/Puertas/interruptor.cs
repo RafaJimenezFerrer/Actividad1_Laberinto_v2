@@ -1,11 +1,14 @@
 using UnityEngine;
 
-public class interruptor : MonoBehaviour
+public class Interruptor : MonoBehaviour
 {
-    public puerta puerta_asociada;
+    [Header("Variables publicas")]
+    public AperturaPuerta puertaAsociada;
+
+    // Variables privadas
     private bool activado = false;
 
-    public void activar()
+    public void Activar()
     {
         if (activado)
             return;
@@ -13,9 +16,9 @@ public class interruptor : MonoBehaviour
         activado = true;
         Debug.Log("Interruptor ACTIVADO");
 
-        if (puerta_asociada != null)
+        if (puertaAsociada != null)
         {
-            puerta_asociada.abrir();
+            puertaAsociada.Abrir();
         }
     }
 }

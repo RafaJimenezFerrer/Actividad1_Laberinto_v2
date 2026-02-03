@@ -525,6 +525,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 19588385245968726, guid: 8ee08d04ad5df46fbb2e97260b63420b, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2032058552}
+    - targetCorrespondingSourceObject: {fileID: 19588385245968726, guid: 8ee08d04ad5df46fbb2e97260b63420b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2032058556}
   m_SourcePrefab: {fileID: 100100000, guid: 8ee08d04ad5df46fbb2e97260b63420b, type: 3}
 --- !u!1001 &86819940
 PrefabInstance:
@@ -1230,12 +1233,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::trampa_roca_caida
   roca: {fileID: 1396856469}
-  distancia_caida: 3.1
-  velocidad_caida: 10
-  velocidad_subida: 2
-  tiempo_abajo: 1.5
-  tiempo_arriba: 1
-  particulas_impacto: {fileID: 0}
+  distanciaCaida: 3.1
+  velocidadCaida: 10
+  velocidadSubida: 2
+  tiempoAbajo: 1.5
+  tiempoArriba: 1
+  particulasImpacto: {fileID: 0}
 --- !u!65 &163405357
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2131,6 +2134,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &322947955
 MeshFilter:
@@ -2225,7 +2229,7 @@ MonoBehaviour:
   vidaMaxima: 100
   vidaActual: 0
   barraVida: {fileID: 880745504}
-  "audioDa\xF1o": {fileID: 322947961}
+  audioDanio: {fileID: 0}
   tiempoEntreSonidos: 1
 --- !u!82 &322947961
 AudioSource:
@@ -2500,6 +2504,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 19588385245968726, guid: 8ee08d04ad5df46fbb2e97260b63420b, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1013098479}
+    - targetCorrespondingSourceObject: {fileID: 19588385245968726, guid: 8ee08d04ad5df46fbb2e97260b63420b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1013098483}
   m_SourcePrefab: {fileID: 100100000, guid: 8ee08d04ad5df46fbb2e97260b63420b, type: 3}
 --- !u!1 &330585543
 GameObject:
@@ -2651,7 +2658,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9de3a80ec67a5d44e9a6b8b9bf044b0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::disparo_jugador
-  distancia_disparo: 10
+  distanciaDisparo: 10
 --- !u!4 &337899553 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4998095870887986437, guid: be4d1b3310c2c0a4e8f2c75c2c856831, type: 3}
@@ -3095,6 +3102,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 19588385245968726, guid: 8ee08d04ad5df46fbb2e97260b63420b, type: 3}
       insertIndex: -1
       addedObject: {fileID: 398143071}
+    - targetCorrespondingSourceObject: {fileID: 19588385245968726, guid: 8ee08d04ad5df46fbb2e97260b63420b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 398143075}
   m_SourcePrefab: {fileID: 100100000, guid: 8ee08d04ad5df46fbb2e97260b63420b, type: 3}
 --- !u!1 &398143063 stripped
 GameObject:
@@ -3200,8 +3210,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 104c12a3144a43a469f376946242603b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: "Assembly-CSharp::EnemigoFantasmaDa\xF1o"
-  "da\xF1o": 20
-  "tiempoEntreDa\xF1o": 1.2
+  danio: 20
+  tiempoEntreDanio: 1.2
+--- !u!114 &398143075
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 398143063}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b28a76252966e4447b7babfe78be75e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemigoPersecucion
+  personaje: {fileID: 0}
+  "tama\xF1oCaja": {x: 2, y: 2, z: 2}
+  agente: {fileID: 0}
 --- !u!1 &404728273
 GameObject:
   m_ObjectHideFlags: 0
@@ -3346,14 +3371,14 @@ Light:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 410087039}
   m_Enabled: 1
-  serializedVersion: 11
+  serializedVersion: 12
   m_Type: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 2
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
-  m_CookieSize: 10
+  m_CookieSize2D: {x: 10, y: 10}
   m_Shadows:
     m_Type: 2
     m_Resolution: -1
@@ -3618,6 +3643,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1329338216900944344, guid: 8becaf85659c40841890aa9011e58e15, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4379431056557622759, guid: 8becaf85659c40841890aa9011e58e15, type: 3}
+      propertyPath: m_Convex
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5037085935251282518, guid: 8becaf85659c40841890aa9011e58e15, type: 3}
@@ -5930,6 +5959,7 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
@@ -6507,8 +6537,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 104c12a3144a43a469f376946242603b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: "Assembly-CSharp::EnemigoFantasmaDa\xF1o"
-  "da\xF1o": 20
-  "tiempoEntreDa\xF1o": 1.2
+  danio: 20
+  tiempoEntreDanio: 1.2
+--- !u!114 &1013098483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1013098471}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b28a76252966e4447b7babfe78be75e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemigoPersecucion
+  personaje: {fileID: 0}
+  "tama\xF1oCaja": {x: 2, y: 2, z: 2}
+  agente: {fileID: 0}
 --- !u!1001 &1018931440
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8489,6 +8534,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &1396856474
 MeshFilter:
@@ -8706,6 +8752,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 19588385245968726, guid: 8ee08d04ad5df46fbb2e97260b63420b, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1423005857}
+    - targetCorrespondingSourceObject: {fileID: 19588385245968726, guid: 8ee08d04ad5df46fbb2e97260b63420b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1423005861}
   m_SourcePrefab: {fileID: 100100000, guid: 8ee08d04ad5df46fbb2e97260b63420b, type: 3}
 --- !u!1 &1423005849 stripped
 GameObject:
@@ -8810,8 +8859,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 104c12a3144a43a469f376946242603b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: "Assembly-CSharp::EnemigoFantasmaDa\xF1o"
-  "da\xF1o": 20
-  "tiempoEntreDa\xF1o": 1.2
+  danio: 20
+  tiempoEntreDanio: 1.2
+--- !u!114 &1423005861
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1423005849}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b28a76252966e4447b7babfe78be75e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemigoPersecucion
+  personaje: {fileID: 0}
+  "tama\xF1oCaja": {x: 2, y: 2, z: 2}
+  agente: {fileID: 0}
 --- !u!1001 &1443452262
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9200,6 +9264,7 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
@@ -12301,6 +12366,7 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: -3
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
@@ -12933,8 +12999,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 104c12a3144a43a469f376946242603b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: "Assembly-CSharp::EnemigoFantasmaDa\xF1o"
-  "da\xF1o": 20
-  "tiempoEntreDa\xF1o": 1.2
+  danio: 20
+  tiempoEntreDanio: 1.2
+--- !u!114 &2032058556
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2032058544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b28a76252966e4447b7babfe78be75e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemigoPersecucion
+  personaje: {fileID: 0}
+  "tama\xF1oCaja": {x: 2, y: 2, z: 2}
+  agente: {fileID: 0}
 --- !u!1001 &2040018109
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13295,6 +13376,7 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: -3
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0

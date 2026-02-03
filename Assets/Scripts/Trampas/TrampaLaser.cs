@@ -1,24 +1,28 @@
 using UnityEngine;
 using System.Collections;
 
-public class trampa_laser : MonoBehaviour
+public class TrampaLaser : MonoBehaviour
 {
+    // Variables
+    [Header("Variables publicas")]
     [Header("Movimiento")]
-    public float distancia_salida = 0.6f;
-    public float tiempo_fuera = 1.5f;
-    public float tiempo_dentro = 1.5f;
+    public float distanciaSalida = 0.6f;
+    public float tiempoFuera = 1.5f;
+    public float tiempoDentro = 1.5f;
     public float velocidad = 3f;
 
-    [Header("Daño")]
-    public float dañoInstantaneo = 50f;
+    [Header("Danio")]
+    public float danioInstantaneo = 50f;
 
-    private Vector3 posicion_dentro;
-    private Vector3 posicion_fuera;
+    // Variables privadas
+    private Vector3 posicionDentro;
+    private Vector3 posicionFuera;
 
+    // Metodos
     void Start()
     {
-        posicion_dentro = transform.localPosition;
-        posicion_fuera = posicion_dentro + Vector3.forward * distancia_salida;
+        posicionDentro = transform.localPosition;
+        posicionFuera = posicionDentro + Vector3.forward * distanciaSalida;
 
         StartCoroutine(ciclo_laser());
     }
@@ -28,30 +32,30 @@ public class trampa_laser : MonoBehaviour
         while (true)
         {
             // Salir
-            while (Vector3.Distance(transform.localPosition, posicion_fuera) > 0.01f)
+            while (Vector3.Distance(transform.localPosition, posicionFuera) > 0.01f)
             {
                 transform.localPosition = Vector3.MoveTowards(
                     transform.localPosition,
-                    posicion_fuera,
+                    posicionFuera,
                     velocidad * Time.deltaTime
                 );
                 yield return null;
             }
 
-            yield return new WaitForSeconds(tiempo_fuera);
+            yield return new WaitForSeconds(tiempoFuera);
 
             // Entrar
-            while (Vector3.Distance(transform.localPosition, posicion_dentro) > 0.01f)
+            while (Vector3.Distance(transform.localPosition, posicionDentro) > 0.01f)
             {
                 transform.localPosition = Vector3.MoveTowards(
                     transform.localPosition,
-                    posicion_dentro,
+                    posicionDentro,
                     velocidad * Time.deltaTime
                 );
                 yield return null;
             }
 
-            yield return new WaitForSeconds(tiempo_dentro);
+            yield return new WaitForSeconds(tiempoDentro);
         }
     }
 
@@ -62,7 +66,7 @@ public class trampa_laser : MonoBehaviour
             VidaJugador vida = other.GetComponent<VidaJugador>();
             if (vida != null)
             {
-                vida.RecibirDaño(dañoInstantaneo);
+                vida.RecibirDanio(danioInstantaneo);
             }
         }
     }

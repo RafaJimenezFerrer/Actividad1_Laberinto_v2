@@ -3,6 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class VolverAlMenu : MonoBehaviour
 {
+    // Metodos
     public void IrAlMenu()
     {
         Time.timeScale = 1f;

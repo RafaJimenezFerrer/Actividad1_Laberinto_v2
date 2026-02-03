@@ -3,6 +3,8 @@ using UnityEngine.UI;
 
 public class VidaJugador : MonoBehaviour
 {
+    // Variables
+    [Header("Variables publicas")]
     [Header("Vida")]
     public float vidaMaxima = 100f;
     public float vidaActual;
@@ -10,26 +12,28 @@ public class VidaJugador : MonoBehaviour
     [Header("UI")]
     public Image barraVida;
 
-    [Header("Sonido Daño")]
-    public AudioSource audioDaño;
+    [Header("Sonido Danio")]
+    public AudioSource audioDanio;
     public float tiempoEntreSonidos = 1f;
 
+    // Variables privadas
     private float siguienteSonido = 0f;
 
+    // Metodos
     void Start()
     {
         vidaActual = vidaMaxima;
         ActualizarBarra();
     }
 
-    public void RecibirDaño(float daño)
+    public void RecibirDanio(float daño)
     {
         vidaActual -= daño;
         vidaActual = Mathf.Clamp(vidaActual, 0, vidaMaxima);
 
-        if (audioDaño != null && Time.time >= siguienteSonido)
+        if (audioDanio != null && Time.time >= siguienteSonido)
         {
-            audioDaño.Play();
+            audioDanio.Play();
             siguienteSonido = Time.time + tiempoEntreSonidos;
         }
 
@@ -49,10 +53,10 @@ public class VidaJugador : MonoBehaviour
 
     void Morir()
     {
-        muerte_jugador muerte = GetComponent<muerte_jugador>();
+        MuerteJugador muerte = GetComponent<MuerteJugador>();
         if (muerte != null)
         {
-            muerte.morir();
+            muerte.Morir();
         }
     }
 }

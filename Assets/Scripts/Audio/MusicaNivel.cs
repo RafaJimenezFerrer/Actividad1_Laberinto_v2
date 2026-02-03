@@ -2,9 +2,10 @@ using UnityEngine;
 
 public class MusicaNivel : MonoBehaviour
 {
-    void Start()
+    // Metodos
+    private void Start()
     {
-        MusicaMenu menu = FindObjectOfType<MusicaMenu>();
+        MusicaMenu menu = Object.FindFirstObjectByType<MusicaMenu>();
         if (menu != null)
         {
             Destroy(menu.gameObject);

@@ -2,8 +2,10 @@ using UnityEngine;
 using System.Collections;
 using UnityEngine.SceneManagement;
 
-public class muerte_jugador : MonoBehaviour
+public class MuerteJugador : MonoBehaviour
 {
+    // Variables
+    [Header("Variables publicas")]
     [Header("UI")]
     public GameObject pantallaMuerte; 
     public GameObject barraVidaUI; 
@@ -11,20 +13,25 @@ public class muerte_jugador : MonoBehaviour
     [Header("Respawn")]
     public float tiempo_espera = 2f;
 
+    // Variables privadas
     private CharacterController controller;
     private MonoBehaviour script_movimiento;
     private bool yaMuerto = false;
 
-    void Start()
+    // Metodos
+    private void Awake()
     {
         controller = GetComponent<CharacterController>();
         script_movimiento = GetComponent<MovimientoPersonaje>();
+    }
 
+    void Start()
+    {
         if (pantallaMuerte != null)
             pantallaMuerte.SetActive(false);
     }
 
-    public void morir()
+    public void Morir()
     {
         if (yaMuerto) return;
         yaMuerto = true;

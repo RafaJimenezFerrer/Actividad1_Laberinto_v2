@@ -1,11 +1,13 @@
 using UnityEngine;
 using System.Collections;
 
-public class Trampa_fuego : MonoBehaviour
+[RequireComponent(typeof(ParticleSystem))]
+[RequireComponent (typeof(Collider))]
+public class TrampaFuego : MonoBehaviour
 {
     public float tiempo_encendido = 2f;
     public float tiempo_apagado = 2f;
-    public float dañoPorSegundo = 20f;
+    public float danioPorSegundo = 20f;
 
     private ParticleSystem fuego;
     private Collider collider_fuego;
@@ -51,7 +53,7 @@ public class Trampa_fuego : MonoBehaviour
             VidaJugador vida = other.GetComponent<VidaJugador>();
             if (vida != null)
             {
-                vida.RecibirDaño(dañoPorSegundo * Time.deltaTime);
+                vida.RecibirDanio(danioPorSegundo * Time.deltaTime);
             }
         }
     }
