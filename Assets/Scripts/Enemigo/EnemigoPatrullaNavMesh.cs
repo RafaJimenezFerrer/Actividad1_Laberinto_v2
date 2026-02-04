@@ -10,7 +10,7 @@ public class EnemigoPatrullaNavMesh : MonoBehaviour
     public float tiempoEspera = 1f;
 
     // Variables privadas
-    private NavMeshAgent agente;
+    public NavMeshAgent agente;
     private int indiceActual = 0;
     private float contadorEspera;
 

@@ -1,6 +1,7 @@
 using UnityEngine;
 
-[RequireComponent (typeof(CharacterController))]
+[RequireComponent (typeof(CharacterController))] 
+[RequireComponent(typeof(CapsuleCollider))]
 public class MovimientoPersonaje : MonoBehaviour
 {
     // Variables

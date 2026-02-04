@@ -2102,6 +2102,7 @@ GameObject:
   - component: {fileID: 322947959}
   - component: {fileID: 322947960}
   - component: {fileID: 322947961}
+  - component: {fileID: 322947962}
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
@@ -2350,6 +2351,29 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!136 &322947962
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 322947952}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5000001
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &323979599
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3149,6 +3173,7 @@ MonoBehaviour:
   - {fileID: 967551873}
   - {fileID: 1999430318}
   tiempoEspera: 1
+  agente: {fileID: 398143065}
 --- !u!195 &398143065
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -3245,9 +3270,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47b156b75de73dd478cd82a9aee50359, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PersecucionPersonaje
-  radio: 5
-  personaje: {fileID: 322947957}
-  distanciaEscucha: 0.01
+  radioVision: 2.5
+  distanciaRayo: 5
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!1 &404728273
 GameObject:
   m_ObjectHideFlags: 0
@@ -6503,6 +6530,7 @@ MonoBehaviour:
   - {fileID: 1843860996}
   - {fileID: 764166524}
   tiempoEspera: 1
+  agente: {fileID: 1013098473}
 --- !u!195 &1013098473
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -6599,9 +6627,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47b156b75de73dd478cd82a9aee50359, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PersecucionPersonaje
-  radio: 5
-  personaje: {fileID: 322947957}
-  distanciaEscucha: 0.01
+  radioVision: 2.5
+  distanciaRayo: 5
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!1001 &1018931440
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8858,6 +8888,7 @@ MonoBehaviour:
   - {fileID: 703031954}
   - {fileID: 1712104988}
   tiempoEspera: 1
+  agente: {fileID: 1423005851}
 --- !u!195 &1423005851
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -8954,9 +8985,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47b156b75de73dd478cd82a9aee50359, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PersecucionPersonaje
-  radio: 5
-  personaje: {fileID: 322947957}
-  distanciaEscucha: 0.01
+  radioVision: 2.5
+  distanciaRayo: 5
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!1001 &1443452262
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13032,6 +13065,7 @@ MonoBehaviour:
   - {fileID: 1843860996}
   - {fileID: 764166524}
   tiempoEspera: 1
+  agente: {fileID: 2032058546}
 --- !u!195 &2032058546
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -13128,9 +13162,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47b156b75de73dd478cd82a9aee50359, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PersecucionPersonaje
-  radio: 5
-  personaje: {fileID: 322947957}
-  distanciaEscucha: 0.01
+  radioVision: 2.5
+  distanciaRayo: 5
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!1001 &2040018109
 PrefabInstance:
   m_ObjectHideFlags: 0
