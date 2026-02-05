@@ -8,9 +8,9 @@ public class EnemigoPatrullaNavMesh : MonoBehaviour
     [Header("Variables publicas")]
     public Transform[] puntosPatrulla;
     public float tiempoEspera = 1f;
+    public NavMeshAgent agente;
 
     // Variables privadas
-    public NavMeshAgent agente;
     private int indiceActual = 0;
     private float contadorEspera;
 
@@ -26,7 +26,7 @@ public class EnemigoPatrullaNavMesh : MonoBehaviour
             agente.SetDestination(puntosPatrulla[0].position);
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         if (!agente.pathPending && agente.remainingDistance < 0.2f)
         {

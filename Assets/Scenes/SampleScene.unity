@@ -3271,10 +3271,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PersecucionPersonaje
   radioVision: 2.5
-  distanciaRayo: 5
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 0
+  distanciaRayo: 2.5
 --- !u!1 &404728273
 GameObject:
   m_ObjectHideFlags: 0
@@ -6628,10 +6625,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PersecucionPersonaje
   radioVision: 2.5
-  distanciaRayo: 5
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 0
+  distanciaRayo: 2.5
 --- !u!1001 &1018931440
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8986,10 +8980,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PersecucionPersonaje
   radioVision: 2.5
-  distanciaRayo: 5
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 0
+  distanciaRayo: 2.5
 --- !u!1001 &1443452262
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13163,10 +13154,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PersecucionPersonaje
   radioVision: 2.5
-  distanciaRayo: 5
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 0
+  distanciaRayo: 2.5
 --- !u!1001 &2040018109
 PrefabInstance:
   m_ObjectHideFlags: 0
