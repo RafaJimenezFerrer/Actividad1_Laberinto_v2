@@ -30,6 +30,12 @@ public class DisparoJugador : MonoBehaviour
             {
                 impacto.collider.GetComponent<Interruptor>().Activar();
             }
+
+            MuerteEnemigo muerteEnemigo = impacto.collider.GetComponent<MuerteEnemigo>();
+            if (muerteEnemigo != null)
+            {
+                muerteEnemigo.RecibirDisparo();
+            }
         }
     }
 

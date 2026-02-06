@@ -35,12 +35,12 @@ public class MuerteJugador : MonoBehaviour
     {
         if (yaMuerto) return;
         yaMuerto = true;
-
         StartCoroutine(SecuenciaMuerte());
     }
 
     IEnumerator SecuenciaMuerte()
     {
+       
         // Bloquear jugador
         if (script_movimiento != null)
             script_movimiento.enabled = false;
@@ -51,6 +51,8 @@ public class MuerteJugador : MonoBehaviour
         // Ocultar barra de vida
         if (barraVidaUI != null)
             barraVidaUI.SetActive(false);
+
+        
 
         // Mostrar pantalla de muerte
         if (pantallaMuerte != null)
