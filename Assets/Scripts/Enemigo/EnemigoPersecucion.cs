@@ -40,7 +40,6 @@ public class EnemigoPersecucion : MonoBehaviour
                 {
                     if ((impacto.collider.GetComponent<MovimientoPersonaje>()))
                     {
-                        Debug.Log("Personaje encontrado. Persiguiendo");
                         enemigo.agente.SetDestination(personaje.transform.position);
                     }
                 }
