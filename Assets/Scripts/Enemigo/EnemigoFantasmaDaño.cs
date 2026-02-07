@@ -8,9 +8,21 @@ public class EnemigoFantasmaDaño : MonoBehaviour
     public float danio = 20f;
     public float tiempoEntreDanio = 1.2f;
 
+    [Header("Sonido")]
+    public AudioSource fuenteSonido;
+
     // Variables privadas
     private float siguienteDanio = 0f;
 
+
+    private void Awake()
+    {
+
+        if (fuenteSonido == null)
+        {
+            fuenteSonido = GetComponent<AudioSource>();
+        }
+    }
     // Metodos
     private void OnTriggerStay(Collider other)
     {
@@ -25,6 +37,19 @@ public class EnemigoFantasmaDaño : MonoBehaviour
         {
             vida.RecibirDanio(danio);
             siguienteDanio = Time.time + tiempoEntreDanio;
+
+            if (fuenteSonido != null)
+            {
+                if (vida.vidaActual > 0)
+                {
+                    fuenteSonido.Play();
+                }
+                else
+                {
+                    fuenteSonido.Stop();
+                }
+            }
         }
     }
 }
+

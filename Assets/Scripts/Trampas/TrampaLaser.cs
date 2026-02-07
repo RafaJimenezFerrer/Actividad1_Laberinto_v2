@@ -13,6 +13,8 @@ public class TrampaLaser : MonoBehaviour
 
     [Header("Danio")]
     public float danioInstantaneo = 50f;
+    public float tiempoEntreDanio = 1.0f;
+    private float siguienteDanio;
 
     // Variables privadas
     private Vector3 posicionDentro;
@@ -63,10 +65,15 @@ public class TrampaLaser : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            VidaJugador vida = other.GetComponent<VidaJugador>();
-            if (vida != null)
+            if (Time.time >= siguienteDanio)
             {
-                vida.RecibirDanio(danioInstantaneo);
+                VidaJugador vida = other.GetComponent<VidaJugador>();
+                if (vida != null)
+                {
+                    vida.RecibirDanio(danioInstantaneo);
+
+                    siguienteDanio = Time.time + tiempoEntreDanio;
+                }
             }
         }
     }
