@@ -3357,6 +3357,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f15ca6052ea52041956870f92b3a2cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MuerteEnemigo
+  puntosPorMatar: 25
 --- !u!82 &398143081
 AudioSource:
   m_ObjectHideFlags: 0
@@ -4309,8 +4310,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -200, y: -50}
-  m_SizeDelta: {x: 400, y: 100}
+  m_AnchoredPosition: {x: 50, y: -100}
+  m_SizeDelta: {x: 786.4034, y: 116.134}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &571788652
 MonoBehaviour:
@@ -4334,8 +4335,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Puntos: 0'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 59840a9117fd14d4f910b850b24e28a3, type: 2}
+  m_sharedMaterial: {fileID: -7385628055488839481, guid: 59840a9117fd14d4f910b850b24e28a3, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -4369,7 +4370,7 @@ MonoBehaviour:
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
-  m_characterSpacing: 0
+  m_characterSpacing: -3
   m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
@@ -7062,6 +7063,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f15ca6052ea52041956870f92b3a2cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MuerteEnemigo
+  puntosPorMatar: 25
 --- !u!82 &1013098489
 AudioSource:
   m_ObjectHideFlags: 0
@@ -9535,6 +9537,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f15ca6052ea52041956870f92b3a2cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MuerteEnemigo
+  puntosPorMatar: 25
 --- !u!82 &1423005867
 AudioSource:
   m_ObjectHideFlags: 0
@@ -11493,9 +11496,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64e64ccf249686f469a0eb2f7a4ecd5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PuntuacionAbrirPuerta
-  pointsOnOpen: 10
-  oneTime: 1
-  opened: 0
 --- !u!1 &1863195797
 GameObject:
   m_ObjectHideFlags: 0
@@ -13868,6 +13868,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f15ca6052ea52041956870f92b3a2cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MuerteEnemigo
+  puntosPorMatar: 25
 --- !u!82 &2032058562
 AudioSource:
   m_ObjectHideFlags: 0
