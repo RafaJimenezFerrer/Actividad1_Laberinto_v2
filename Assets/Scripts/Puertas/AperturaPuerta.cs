@@ -6,7 +6,7 @@ public class AperturaPuerta : MonoBehaviour
     [Header("Variables publicas")]
     public float distanciaApertura = 1f;
     public float velocidad = 2f;
-
+    [SerializeField] private int pointsOnOpen = 10;
     public bool abrirIzquierda = true;
 
     // Variables privadas
@@ -47,5 +47,7 @@ public class AperturaPuerta : MonoBehaviour
         {
             abriendo = true;
         }
+        Debug.Log("[Door] Open() llamado por botón UI");
+        ScoreManager.Instance.Add(pointsOnOpen);
     }
 }

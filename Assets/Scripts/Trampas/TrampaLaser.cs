@@ -16,6 +16,15 @@ public class TrampaLaser : MonoBehaviour
     public float tiempoEntreDanio = 1.0f;
     private float siguienteDanio;
 
+    [Header("Puntuacion y danio")]
+    [SerializeField] private int pointsOnDamage = 10;
+    [SerializeField] private int healthDamage = 10;
+
+    [Header("Una sola vez por entrada")]
+    [SerializeField] private bool oneTimePerEntry = true;
+    private bool hasAppliedOnThisEntry = false;
+
+
     // Variables privadas
     private Vector3 posicionDentro;
     private Vector3 posicionFuera;
@@ -76,5 +85,17 @@ public class TrampaLaser : MonoBehaviour
                 }
             }
         }
+
+        if (!other.CompareTag("Player")) return;
+
+        if (oneTimePerEntry && hasAppliedOnThisEntry) return;
+        hasAppliedOnThisEntry = true;
+
+        ScoreManager.Instance.Subtract(pointsOnDamage);
+        Debug.Log("[Trap] ¡Trampa activada! - puntos -" + pointsOnDamage);
+
+
+        if (!other.CompareTag("Player")) return;
+        hasAppliedOnThisEntry = false;
     }
 }

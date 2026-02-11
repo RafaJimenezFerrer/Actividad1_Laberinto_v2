@@ -5,6 +5,15 @@ using System.Collections;
 [RequireComponent (typeof(Collider))]
 public class TrampaFuego : MonoBehaviour
 {
+    [Header("Danio periodico")]
+    [SerializeField] private int pointsPerTick = 5;
+    [SerializeField] private int healthDamagePerTick = 5;
+    [SerializeField] private float tickInterval = 1.0f;
+
+    private float nextTickTime = 0f;
+    private bool playerInside = false;
+    private VidaJugador cachedPlayer;
+
     public float tiempo_encendido = 2f;
     public float tiempo_apagado = 2f;
     public float danioPorSegundo = 20f;
@@ -56,7 +65,36 @@ public class TrampaFuego : MonoBehaviour
                 vida.RecibirDanio(danioPorSegundo * Time.deltaTime);
             }
         }
+        if (!playerInside || !other.CompareTag("Player")) return;
+
+        if (Time.time >= nextTickTime)
+        {
+            // Resta puntos
+            ScoreManager.Instance.Subtract(pointsPerTick);
+
+            // Daño a vida
+            if (cachedPlayer != null)
+                cachedPlayer.RecibirDanio(healthDamagePerTick);
+
+            nextTickTime = Time.time + tickInterval;
+        }
+
     }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (!other.CompareTag("Player")) return;
+        playerInside = true;
+        cachedPlayer = other.GetComponent<VidaJugador>();
+        nextTickTime = Time.time; // aplica inmediatamente en el siguiente Update
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (!other.CompareTag("Player")) return;
+        playerInside = false;
+        cachedPlayer = null;
+    }
+
 }
 
 

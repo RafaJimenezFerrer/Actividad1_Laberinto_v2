@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 public class DisparoJugador : MonoBehaviour
 {
@@ -31,7 +31,7 @@ public class DisparoJugador : MonoBehaviour
                 impacto.collider.GetComponent<Interruptor>().Activar();
             }
 
-            MuerteEnemigo muerteEnemigo = impacto.collider.GetComponent<MuerteEnemigo>();
+            MuerteEnemigo muerteEnemigo = impacto.collider.GetComponentInParent<MuerteEnemigo>();
             if (muerteEnemigo != null)
             {
                 muerteEnemigo.RecibirDisparo();

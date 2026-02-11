@@ -5,6 +5,10 @@ public class EnemigoFantasmaDaño : MonoBehaviour
     // Variables
     [Header("Variables publicas")]
     [Header("Danio")]
+    [Header("penalizacion")]
+    [SerializeField] private int pointsOnTouchPenalty = 5;
+    [SerializeField] private bool useTrigger = true;
+
     public float danio = 20f;
     public float tiempoEntreDanio = 1.2f;
 
@@ -51,5 +55,27 @@ public class EnemigoFantasmaDaño : MonoBehaviour
             }
         }
     }
-}
+    
+private void OnTriggerEnter(Collider other)
+    {
+        if (!useTrigger) return;
+        if (!other.CompareTag("Player")) return;
+
+        ApplyPenaltyAndDamage(other.gameObject);
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (useTrigger) return;
+        if (!collision.collider.CompareTag("Player")) return;
+
+        ApplyPenaltyAndDamage(collision.collider.gameObject);
+    }
+
+    private void ApplyPenaltyAndDamage(GameObject player)
+    {
+        ScoreManager.Instance.Subtract(pointsOnTouchPenalty);
+        Debug.Log($"[EnemyContactDamage] Toque enemigo: -{pointsOnTouchPenalty} puntos");
+    }
+ }
 
